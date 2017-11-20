@@ -1,2 +1,8 @@
 # Amp
 /dev/i2c-1                                           u:object_r:audio_device:s0
+
+# MSM camera related
+/dev/media[0-9]+                       u:object_r:camera_device:s0
+/dev/jpeg[0-9]+                        u:object_r:camera_device:s0
+
+/system/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
