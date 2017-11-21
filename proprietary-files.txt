@@ -1,7 +1,8 @@
 # Camera
 etc/B05QL_s5k5e3yx_module_info.xml
-etc/G08QU_imx219_module_info.xml
-lib/hw/camera.msm8916.so:lib/hw/camera.vendor.msm8916.so
+etc/F13QS_imx135_module_info.xml
+etc/H08QL_s5k4h5yb_module_info.xml
+# lib/hw/camera.msm8916.so:lib/hw/camera.vendor.msm8916.so
 lib/libaec_algo_front.so
 lib/libaec_algo_rear.so
 lib/libaf_algo_rear.so
@@ -73,13 +74,11 @@ vendor/lib/libqomx_jpegenc.so
 # NFC
 lib/hw/nfc_nci.msm8916.so
 etc/security_nfc_profile.dat
-etc/sec_s3fwrn5_rfreg.bin
-vendor/firmware/sec_s3fwrn5_firmware.bin
 
 # Sensors
-etc/calib_SI_matrix_data_file.dat
 lib/hw/sensors.msm8916.so
-lib/libalgobsx.so
+lib/libyasalgo.so
+lib/libsensor.so
 
 # RIL
 lib/libsec-ril.so|1c02d1c3ff89b2da9194fa1d1fc099ff
@@ -106,28 +105,3 @@ etc/Handset_cal.acdb
 etc/Hdmi_cal.acdb
 etc/Headset_cal.acdb
 etc/Speaker_cal.acdb
-
-# Audio
-etc/Tfa9895.cnt
-lib/hw/audio.primary.msm8916.so
-lib/soundfx/libaudiosa_sec.so
-lib/soundfx/libaudioeffectoffload.so
-lib/libaudioroute.so
-lib/libaudiosa.so
-lib/lib_DNSe_EP_ver216b.so
-lib/lib_SA_GoogleFX_ver124b.so
-lib/libsamsungearcare.so
-lib/libsamsungeffect.so
-lib/libsamsungpowersound.so
-lib/libSamsungPreProcess.so
-lib/libsamsungRecord.so
-lib/lib_SamsungRec_V04012.so
-lib/lib_Samsung_Resampler.so
-lib/libsamsungVoipResampler.so
-lib/libsoundalive.so
-lib/lib_SoundAlive_play_ver125e.so
-lib/lib_soundaliveresampler.so
-lib/lib_SoundAlive_SRC192_ver205.so
-lib/lib_SoundAlive_ver118t.so
-lib/libtfa9895.so
-lib/libtinyalsa.so
