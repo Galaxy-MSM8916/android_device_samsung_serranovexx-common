@@ -4,5 +4,545 @@ on post-fs-data
     chmod 0666 /dev/i2c-1
     chown system system /dev/i2c-1
 
+    # IR
+    chmod 0666 /sys/class/sec/sec_ir/ir_send
+    chown system system /sys/class/sec/sec_ir/ir_send
     # Set MDNIE dynamic mode
     write /sys/class/mdnie/mdnie/mode 0
+
+
+#lsm6ds3_accel
+    chown system system /dev/iio:device0
+    chown system system /sys/bus/iio/devices/trigger0
+    chown system system /sys/bus/iio/devices/trigger0/name
+    chown system system /sys/bus/iio/devices/iio:device0
+    chown system system /sys/bus/iio/devices/iio:device0/accl_enable
+    chown system system /sys/bus/iio/devices/iio:device0/buffer
+    chown system system /sys/bus/iio/devices/iio:device0/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device0/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device0/dev
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_scale_available
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_x_raw
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_x_scale
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_y_raw
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_y_scale
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_z_raw
+    chown system system /sys/bus/iio/devices/iio:device0/in_accel_z_scale
+    chown system system /sys/bus/iio/devices/iio:device0/sampling_frequency
+    chown system system /sys/bus/iio/devices/iio:device0/name
+    chown system system /sys/bus/iio/devices/iio:device0/sampling_frequency_available
+    chown system system /sys/bus/iio/devices/iio:device0/self_test
+    chown system system /sys/bus/iio/devices/iio:device0/self_test_available
+    chown system system /sys/bus/iio/devices/iio:device0/self_test_run
+    chown system system /sys/bus/iio/devices/iio:device0/trigger
+    chown system system /sys/bus/iio/devices/iio:device0/trigger/current_trigger
+    chown system system /sys/bus/iio/devices/iio:device0/uevent
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_in_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_raw_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_out_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_input_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_index
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_type
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_index
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_type
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_index
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_type
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_type
+
+    chmod 0755 /dev/iio:device0
+    chmod 0755 /sys/bus/iio/devices/trigger0/name
+    chmod 0755 /sys/bus/iio/devices/iio:device0/accl_enable
+    chmod 0755 /sys/bus/iio/devices/iio:device0/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device0/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device0/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device0/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_scale_available
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_x_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_x_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_y_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_y_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_z_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device0/in_accel_z_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device0/sampling_frequency
+    chmod 0755 /sys/bus/iio/devices/iio:device0/name
+    chmod 0755 /sys/bus/iio/devices/iio:device0/sampling_frequency_available
+    chmod 0755 /sys/bus/iio/devices/iio:device0/self_test
+    chmod 0755 /sys/bus/iio/devices/iio:device0/self_test_available
+    chmod 0755 /sys/bus/iio/devices/iio:device0/self_test_run
+    chmod 0755 /sys/bus/iio/devices/iio:device0/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device0/trigger/current_trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device0/uevent
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_in_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_raw_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_out_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_input_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_index
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_type
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_index
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_type
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_index
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_type
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_type
+
+
+#lsm6ds3_gyro
+    chown system system /dev/iio:device1
+    chown system system /sys/bus/iio/devices/trigger1
+    chown system system /sys/bus/iio/devices/trigger1/name
+    chown system system /sys/bus/iio/devices/iio:device1/buffer
+    chown system system /sys/bus/iio/devices/iio:device1/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device1/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device1/dev
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_scale_available
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_x_raw
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_x_scale
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_y_raw
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_y_scale
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_z_raw
+    chown system system /sys/bus/iio/devices/iio:device1/in_anglvel_z_scale
+    chown system system /sys/bus/iio/devices/iio:device1/name
+    chown system system /sys/bus/iio/devices/iio:device1/sampling_frequency
+    chown system system /sys/bus/iio/devices/iio:device1/sampling_frequency_available
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_in_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_raw_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_out_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_input_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_x_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_x_index
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_x_type
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_y_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_y_index
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_y_type
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_z_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_z_index
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_z_type
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device1/self_test
+    chown system system /sys/bus/iio/devices/iio:device1/self_test_available
+    chown system system /sys/bus/iio/devices/iio:device1/self_test_run
+    chown system system /sys/bus/iio/devices/iio:device1/trigger
+    chown system system /sys/bus/iio/devices/iio:device1/trigger/current_trigger
+    chown system system /sys/bus/iio/devices/iio:device1/uevent
+
+    chmod 0755 /dev/iio:device1
+    chmod 0755 /sys/bus/iio/devices/trigger1
+    chmod 0755 /sys/bus/iio/devices/trigger1/name
+    chmod 0755 /sys/bus/iio/devices/iio:device1/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device1/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device1/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device1/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_scale_available
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_x_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_x_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_y_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_y_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_z_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device1/in_anglvel_z_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device1/name
+    chmod 0755 /sys/bus/iio/devices/iio:device1/sampling_frequency
+    chmod 0755 /sys/bus/iio/devices/iio:device1/sampling_frequency_available
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_in_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_raw_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_out_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_input_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_x_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_x_index
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_x_type
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_y_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_y_index
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_y_type
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_z_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_z_index
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_anglvel_z_type
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device1/self_test
+    chmod 0755 /sys/bus/iio/devices/iio:device1/self_test_available
+    chmod 0755 /sys/bus/iio/devices/iio:device1/self_test_run
+    chmod 0755 /sys/bus/iio/devices/iio:device1/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device1/trigger/current_trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device1/uevent
+
+
+#lsm6ds3_sign_motion
+    chown system system /dev/iio:device2
+    chown system system /sys/bus/iio/devices/trigger2/name
+    chown system system /sys/bus/iio/devices/iio:device2/buffer
+    chown system system /sys/bus/iio/devices/iio:device2/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device2/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device2/dev
+    chown system system /sys/bus/iio/devices/iio:device2/events
+    chown system system /sys/bus/iio/devices/iio:device2/events/in_sign_motion_thresh_rising_en
+    chown system system /sys/bus/iio/devices/iio:device2/events/in_sign_motion_thresh_rising_value
+    chown system system /sys/bus/iio/devices/iio:device2/events/in_in_thresh_rising_en
+    chown system system /sys/bus/iio/devices/iio:device2/name
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_in_en
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_raw_en
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_out_en
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_input_en
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_sign_motion_en
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_sign_motion_index
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_sign_motion_type
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device2/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device2/trigger
+    chown system system /sys/bus/iio/devices/iio:device2/trigger/current_trigger
+    chown system system /sys/bus/iio/devices/iio:device2/uevent
+
+    chmod 0755 /dev/iio:device2
+    chmod 0755 /sys/bus/iio/devices/trigger2/name
+    chmod 0755 /sys/bus/iio/devices/iio:device2/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device2/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device2/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device2/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device2/events
+    chmod 0755 /sys/bus/iio/devices/iio:device2/events/in_sign_motion_thresh_rising_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/events/in_sign_motion_thresh_rising_value
+    chmod 0755 /sys/bus/iio/devices/iio:device2/events/in_in_thresh_rising_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/name
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_in_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_raw_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_out_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_input_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_sign_motion_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_sign_motion_index
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_sign_motion_type
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device2/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device2/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device2/trigger/current_trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device2/uevent
+
+    chown system system /dev/iio:device3
+    chown system system /sys/bus/iio/devices/trigger3
+    chown system system /sys/bus/iio/devices/trigger3/name
+    chown system system /sys/bus/iio/devices/iio:device3/buffer
+    chown system system /sys/bus/iio/devices/iio:device3/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device3/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device3/in_step_counter_raw
+    chown system system /sys/bus/iio/devices/iio:device3/max_delivery_rate
+    chown system system /sys/bus/iio/devices/iio:device3/name
+    chown system system /sys/bus/iio/devices/iio:device3/reset_counter
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_in_en
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_raw_en
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_out_en
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_input_en
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_step_counter_en
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_step_counter_index
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_step_counter_type
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device3/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device3/trigger
+    chown system system /sys/bus/iio/devices/iio:device3/trigger/current_trigger
+    chown system system /sys/bus/iio/devices/iio:device3/uevent
+
+    chmod 0755 /dev/iio:device3
+    chmod 0755 /sys/bus/iio/devices/trigger3
+    chmod 0755 /sys/bus/iio/devices/trigger3/name
+    chmod 0755 /sys/bus/iio/devices/iio:device3/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device3/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device3/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device3/in_step_counter_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device3/max_delivery_rate
+    chmod 0755 /sys/bus/iio/devices/iio:device3/name
+    chmod 0755 /sys/bus/iio/devices/iio:device3/reset_counter
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_in_en
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_raw_en
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_out_en
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_input_en
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_step_counter_en
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_step_counter_index
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_step_counter_type
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device3/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device3/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device3/trigger/current_trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device3/uevent
+
+#lsm6ds3_step_d
+    chown system system /dev/iio:device4
+    chown system system /sys/bus/iio/devices/trigger4
+    chown system system /sys/bus/iio/devices/trigger4/name
+    chown system system /sys/bus/iio/devices/iio:device4/buffer
+    chown system system /sys/bus/iio/devices/iio:device4/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device4/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device4/dev
+    chown system system /sys/bus/iio/devices/iio:device4/events
+    chown system system /sys/bus/iio/devices/iio:device4/events/in_step_detector_thresh_rising_en
+    chown system system /sys/bus/iio/devices/iio:device4/events/in_step_detector_thresh_rising_value
+    chown system system /sys/bus/iio/devices/iio:device4/events/in_input_thresh_rising_en
+    chown system system /sys/bus/iio/devices/iio:device4/name
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_in_en
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_raw_en
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_out_en
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_input_en
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_step_detector_en
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_step_detector_index
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_step_detector_type
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device4/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device4/trigger
+    chown system system /sys/bus/iio/devices/iio:device4/trigger/current_trigger
+
+    chmod 0755 /dev/iio:device4
+    chmod 0755 /sys/bus/iio/devices/trigger4
+    chmod 0755 /sys/bus/iio/devices/trigger4/name
+    chmod 0755 /sys/bus/iio/devices/iio:device4/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device4/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device4/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device4/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device4/events
+    chmod 0755 /sys/bus/iio/devices/iio:device4/events/in_step_detector_thresh_rising_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/events/in_step_detector_thresh_rising_value
+    chmod 0755 /sys/bus/iio/devices/iio:device4/events/in_input_thresh_rising_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/name
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_in_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_raw_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_out_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_input_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_step_detector_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_step_detector_index
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_step_detector_type
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device4/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device4/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device4/trigger/current_trigger
+
+#lsm6ds3_tilt
+    chown system system /dev/iio:device5
+    chown system system /sys/bus/iio/devices/trigger5
+    chown system system /sys/bus/iio/devices/trigger5/name
+    chown system system /sys/bus/iio/devices/iio:device5/buffer
+    chown system system /sys/bus/iio/devices/iio:device5/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device5/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device5/dev
+    chown system system /sys/bus/iio/devices/iio:device5/events
+    chown system system /sys/bus/iio/devices/iio:device5/events/in_tilt_thresh_rising_en
+    chown system system /sys/bus/iio/devices/iio:device5/events/in_tilt_thresh_rising_value
+    chown system system /sys/bus/iio/devices/iio:device5/events/in_raw_thresh_rising_en
+    chown system system /sys/bus/iio/devices/iio:device5/name
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_in_en
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_raw_en
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_out_en
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_input_en
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_tilt_en
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_tilt_index
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_tilt_type
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device5/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device5/trigger
+    chown system system /sys/bus/iio/devices/iio:device5/trigger/current_trigger
+
+    chmod 0755 /dev/iio:device5
+    chmod 0755 /sys/bus/iio/devices/trigger5
+    chmod 0755 /sys/bus/iio/devices/trigger5/name
+    chmod 0755 /sys/bus/iio/devices/iio:device5/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device5/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device5/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device5/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device5/events
+    chmod 0755 /sys/bus/iio/devices/iio:device5/events/in_tilt_thresh_rising_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/events/in_tilt_thresh_rising_value
+    chmod 0755 /sys/bus/iio/devices/iio:device5/events/in_raw_thresh_rising_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/name
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_in_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_raw_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_out_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_input_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_tilt_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_tilt_index
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_tilt_type
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device5/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device5/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device5/trigger/current_trigger
+
+#yas_magnetometer
+    chown system system /dev/iio:device6
+    chown system system /sys/bus/iio/devices/trigger6
+    chown system system /sys/bus/iio/devices/trigger6/name
+    chown system system /sys/bus/iio/devices/iio:device6/buffer
+    chown system system /sys/bus/iio/devices/iio:device6/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device6/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device6/dev
+    chown system system /sys/bus/iio/devices/iio:device6/hard_offset
+    chown system system /sys/bus/iio/devices/iio:device6/in_magn_scale
+    chown system system /sys/bus/iio/devices/iio:device6/in_magn_x_raw
+    chown system system /sys/bus/iio/devices/iio:device6/in_magn_y_raw
+    chown system system /sys/bus/iio/devices/iio:device6/in_magn_z_raw
+    chown system system /sys/bus/iio/devices/iio:device6/mag_average_sample
+    chown system system /sys/bus/iio/devices/iio:device6/name
+    chown system system /sys/bus/iio/devices/iio:device6/ouflow_thresh
+    chown system system /sys/bus/iio/devices/iio:device6/position
+    chown system system /sys/bus/iio/devices/iio:device6/sampling_frequency
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_x_en
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_x_index
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_x_type
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_y_en
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_y_index
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_y_type
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_z_en
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_z_index
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_z_type
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device6/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device6/self_test
+    chown system system /sys/bus/iio/devices/iio:device6/self_test_noise
+    chown system system /sys/bus/iio/devices/iio:device6/static_matrix
+    chown system system /sys/bus/iio/devices/iio:device6/trigger
+    chown system system /sys/bus/iio/devices/iio:device6/trigger/current_trigger
+
+    chmod 0755 /dev/iio:device6
+    chmod 0755 /sys/bus/iio/devices/trigger6
+    chmod 0755 /sys/bus/iio/devices/trigger6/name
+    chmod 0755 /sys/bus/iio/devices/iio:device6/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device6/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device6/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device6/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device6/hard_offset
+    chmod 0755 /sys/bus/iio/devices/iio:device6/in_magn_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device6/in_magn_x_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device6/in_magn_y_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device6/in_magn_z_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device6/mag_average_sample
+    chmod 0755 /sys/bus/iio/devices/iio:device6/name
+    chmod 0755 /sys/bus/iio/devices/iio:device6/ouflow_thresh
+    chmod 0755 /sys/bus/iio/devices/iio:device6/position
+    chmod 0755 /sys/bus/iio/devices/iio:device6/sampling_frequency
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_x_en
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_x_index
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_x_type
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_y_en
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_y_index
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_y_type
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_z_en
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_z_index
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_magn_z_type
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device6/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device6/self_test
+    chmod 0755 /sys/bus/iio/devices/iio:device6/self_test_noise
+    chmod 0755 /sys/bus/iio/devices/iio:device6/static_matrix
+    chmod 0755 /sys/bus/iio/devices/iio:device6/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device6/trigger/current_trigger
+
+#light
+    chown system system /dev/iio:device7
+    chown system system /sys/bus/iio/devices/trigger7
+    chown system system /sys/bus/iio/devices/trigger7/name
+    chown system system /sys/bus/iio/devices/iio:device7/buffer
+    chown system system /sys/bus/iio/devices/iio:device7/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device7/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device7/dev
+    chown system system /sys/bus/iio/devices/iio:device7/in_illuminance_current_raw
+    chown system system /sys/bus/iio/devices/iio:device7/in_illuminance_scale
+    chown system system /sys/bus/iio/devices/iio:device7/name
+    chown system system /sys/bus/iio/devices/iio:device7/sampling_frequency
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements/in_illuminance_current_en
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements/in_illuminance_current_index
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements/in_illuminance_current_type
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device7/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device7/trigger
+    chown system system /sys/bus/iio/devices/iio:device7/trigger/current_trigger
+
+    chmod 0755 /dev/iio:device7
+    chmod 0755 /sys/bus/iio/devices/trigger7
+    chmod 0755 /sys/bus/iio/devices/trigger7/name
+    chmod 0755 /sys/bus/iio/devices/iio:device7/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device7/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device7/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device7/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device7/in_illuminance_current_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device7/in_illuminance_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device7/name
+    chmod 0755 /sys/bus/iio/devices/iio:device7/sampling_frequency
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements/in_illuminance_current_en
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements/in_illuminance_current_index
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements/in_illuminance_current_type
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device7/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device7/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device7/trigger/current_trigger
+
+#proximity
+    chown system system /dev/iio:device8
+    chown system system /sys/bus/iio/devices/trigger8
+    chown system system /sys/bus/iio/devices/trigger8/name
+    chown system system /sys/bus/iio/devices/iio:device8/buffer
+    chown system system /sys/bus/iio/devices/iio:device8/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device8/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device8/dev
+    chown system system /sys/bus/iio/devices/iio:device8/in_proximity_scale
+    chown system system /sys/bus/iio/devices/iio:device8/in_proximity_voltage_raw
+    chown system system /sys/bus/iio/devices/iio:device8/name
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements/in_proximity_voltage_en
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements/in_proximity_voltage_index
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements/in_proximity_voltage_type
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements/in_timestamp_en
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements/in_timestamp_index
+    chown system system /sys/bus/iio/devices/iio:device8/scan_elements/in_timestamp_type
+    chown system system /sys/bus/iio/devices/iio:device8/trigger
+    chown system system /sys/bus/iio/devices/iio:device8/trigger/current_trigger
+
+    chmod 0755 /dev/iio:device8
+    chmod 0755 /sys/bus/iio/devices/trigger8
+    chmod 0755 /sys/bus/iio/devices/trigger8/name
+    chmod 0755 /sys/bus/iio/devices/iio:device8/buffer
+    chmod 0755 /sys/bus/iio/devices/iio:device8/buffer/enable
+    chmod 0755 /sys/bus/iio/devices/iio:device8/buffer/length
+    chmod 0755 /sys/bus/iio/devices/iio:device8/dev
+    chmod 0755 /sys/bus/iio/devices/iio:device8/in_proximity_scale
+    chmod 0755 /sys/bus/iio/devices/iio:device8/in_proximity_voltage_raw
+    chmod 0755 /sys/bus/iio/devices/iio:device8/name
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements/in_proximity_voltage_en
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements/in_proximity_voltage_index
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements/in_proximity_voltage_type
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements/in_timestamp_en
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements/in_timestamp_index
+    chmod 0755 /sys/bus/iio/devices/iio:device8/scan_elements/in_timestamp_type
+    chmod 0755 /sys/bus/iio/devices/iio:device8/trigger
+    chmod 0755 /sys/bus/iio/devices/iio:device8/trigger/current_trigger
