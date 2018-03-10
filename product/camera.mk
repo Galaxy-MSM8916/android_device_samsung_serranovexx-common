@@ -1,5 +1,6 @@
 # Camera
 PRODUCT_PACKAGES += \
+    libqc-opt \
     Snap
 
 # Media (camera) configuration files
