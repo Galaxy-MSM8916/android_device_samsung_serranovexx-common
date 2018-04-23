@@ -26,57 +26,30 @@
    OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#include <android-base/properties.h>
-
-#include "property_service.h"
-#include "vendor_init.h"
-#include "log.h"
-
 #include <init_msm8916.h>
-
-using android::base::GetProperty;
 
 void init_target_properties(void)
 {
-	char *bootloader_str = NULL;
-	char *build_id = NULL;
 	char *device = NULL;
 	char *model = NULL;
-	char *name = NULL;
-	char *operator_alpha = NULL;
-	char *operator_numeric = NULL;
-	char *version_release = NULL;
-
-	int network_type = 1;
 
 	/* get the bootloader string */
 	std::string bootloader = GetProperty("ro.bootloader", "");
 
 	if (bootloader.find("I9195I") == 0) {
-		build_id = (char *)"XXU";
 		device = (char *)"serranovelte";
 		model = (char *)"SM-I9195I";
-		name = (char *)"serranovelte";
-		network_type=LTE_DEVICE;
-		version_release = (char *)"8.0.0";
+		set_lte_properties();
 	}
 	else if (bootloader.find("I9192I") == 0) {
-		build_id = (char *)"XXU";
 		device = (char *)"serranove3g";
 		model = (char *)"SM-I9192I";
-		name = (char *)"serranove3g";
-		network_type=GSM_DEVICE;
-		version_release = (char *)"8.0.0";
+		set_gsm_properties();
 	}
 	else {
 		return;
 	}
 
-	/* make sure device name is set */
-	if (name == NULL)
-		name = device;
-
 	/* set the properties */
-	set_target_properties(build_id, bootloader_str, name, device, model,
-		       network_type, operator_alpha, operator_numeric, version_release);
+	set_target_properties(device, model);
 }
