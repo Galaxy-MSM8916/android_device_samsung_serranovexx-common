@@ -34,7 +34,7 @@ void init_target_properties(void)
 	char *model = NULL;
 
 	/* get the bootloader string */
-	std::string bootloader = GetProperty("ro.bootloader", "");
+	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
 
 	if (bootloader.find("I9195I") == 0) {
 		device = (char *)"serranovelte";
