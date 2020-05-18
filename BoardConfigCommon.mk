@@ -14,10 +14,44 @@
 #  limitations under the License.
 #
 
-# inherit from qcom-common
-include device/samsung/msm8916-common/BoardConfigCommon.mk
-
 LOCAL_PATH := device/samsung/serranovexx-common
 
-# Include board config fragments
-include device/samsung/serranovexx-common/board/*.mk
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/serranovexx-common/bluetooth
+
+# Init
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(LOCAL_PATH)/init/init_serranovexx.cpp
+
+# The first api level the device has commercially launched on
+PRODUCT_SHIPPING_API_LEVEL := 19
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+
+# Screen density
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Include
+TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
+
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+
+# Workaround to avoid issues with legacy liblights on QCOM platforms
+TARGET_PROVIDES_LIBLIGHT := true
+
+# RIL
+BOARD_MODEM_TYPE := xmm7260
+BOARD_PROVIDES_LIBRIL := true
+
+# Wifi
+BOARD_HAVE_SAMSUNG_WIFI := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    $(LOCAL_PATH)/sepolicy
+
+# inherit from qcom-common
+include device/samsung/msm8916-common/BoardConfigCommon.mk
